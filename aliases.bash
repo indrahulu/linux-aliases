@@ -1,0 +1,10 @@
+alias dcu='docker compose up -d && docker compose logs -f'
+alias dcd='docker compose down'
+alias dcl='docker compose logs -f'
+alias dce='docker compose exec -it'
+alias dcc='docker compose config'
+alias dps='docker ps -a --format "table {{.Image}}\t{{.Names}}\t{{.Status}}"'
+alias dpsp='docker ps -a --format "table {{.Image}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+
+alias ll='ls -lh'
+alias la='ls -lah'
