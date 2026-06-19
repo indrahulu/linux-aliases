@@ -28,6 +28,11 @@ install_aliases() {
 
     mv "$tmp" "$target"
 
+    if ! git config --global --get alias.fta >/dev/null 2>&1; then
+        git config --global alias.fta 'fetch --all'
+        echo "Git alias fta ditambahkan."
+    fi
+
     if ! grep -qF '. ~/.bash_aliases' "$HOME/.bashrc" 2>/dev/null; then
         cat >> "$HOME/.bashrc" <<'EOF'
 
